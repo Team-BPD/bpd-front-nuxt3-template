@@ -80,6 +80,7 @@ export default defineNuxtConfig({
         'connect-src': ['ws:', 'http:', 'https:'],
         'worker-src': ['blob:'],
         'child-src': ['blob:'],
+        'img-src': ['data:', 'https:', 'http:'],
         'upgrade-insecure-requests':
           process.env.ENV_MODE != 'PROD' ? false : true,
       },

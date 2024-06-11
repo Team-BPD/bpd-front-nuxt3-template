@@ -1,8 +1,11 @@
 <template>
   <v-app>
-    <v-main>
-      <NuxtPage />
-    </v-main>
+    <v-layout>
+      <LayoutTheDrawer></LayoutTheDrawer>
+      <v-main>
+        <NuxtPage />
+      </v-main>
+    </v-layout>
     <!-- .... -->
   </v-app>
   <!-- <div>

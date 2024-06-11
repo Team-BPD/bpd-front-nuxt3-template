@@ -8,6 +8,8 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 | 대상 | 버전 | 메모 |
 |:---:|---|---|
+| `node` | 20.11.1 | Node 프레임워크 |
+| `npm`| 10.5.0 | Node 패키지 매니저 |
 | `nuxt3` | 3.11.1 | Nuxt 프레임워크 |
 | `vue3`| 3.4.21 | Vue 프레임워크 |
 | `pinia` | 2.1.7 | 상태관리 라이브러리 |

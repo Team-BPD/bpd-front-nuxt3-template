@@ -1,6 +1,6 @@
 <template>
   <v-card flat>
-    <SearchTheHead />
+    <TodoTheHead />
     <TodoTheList />
   </v-card>
 </template>

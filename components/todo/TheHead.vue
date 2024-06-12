@@ -21,8 +21,9 @@
           hide-details
           single-line
           v-model="subject"
-          @keyup.enter="
-            () => {
+          @keypress.enter="
+            (e: any) => {
+              console.log(e);
               $emit('change', subject);
               if (eraseText) subject = '';
             }

@@ -20,6 +20,13 @@
           variant="solo"
           hide-details
           single-line
+          v-model="subject"
+          @keyup.enter="
+            () => {
+              $emit('change', subject);
+              if (eraseText) subject = '';
+            }
+          "
         />
       </v-toolbar-title>
     </v-toolbar>
@@ -28,6 +35,17 @@
   </v-card>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+interface Props {
+  eraseText: boolean;
+}
+const props = withDefaults(defineProps<Props>(), {
+  eraseText: false,
+});
+const emits = defineEmits<{
+  change: [item: string];
+}>();
+const subject = ref('');
+</script>
 
 <style lang="scss" scoped></style>

@@ -22,6 +22,9 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 | `prettier` | 3.2.5 | 포맷팅 모듈 |
 | `eslint-plugin-vue` | 9.22.0 | vue 코드컨벤션 |
 
+## 개발환경 
+VSCode IDE 사용 권장 
+
 ## Setup
 
 Make sure to install the dependencies:

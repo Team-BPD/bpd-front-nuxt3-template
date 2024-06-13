@@ -21,6 +21,12 @@
 </template>
 
 <script lang="ts" setup>
+/**
+ * @description Todo 항목 컴포넌트
+ *   - Todo 항목을 취소
+ *   - Todo 항목을 제거
+ */
+
 import type { TodoItem } from '~/utils/interface';
 
 /*

@@ -1,8 +1,10 @@
 <template>
   <v-list-item :value="index">
-    <template v-slot:prepend="{ isActive }">
+    <template v-slot:prepend>
       <v-list-item-action start>
-        <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
+        <v-checkbox-btn
+          @update:model-value="(v: any) => updateCheck(v)"
+        ></v-checkbox-btn>
       </v-list-item-action>
     </template>
     <template v-slot:append>
@@ -10,23 +12,39 @@
         <v-btn
           icon="mdi-delete-outline"
           variant="text"
-          @click.prevent.stop="() => {}"
+          @click.prevent.stop="$emit('deleteItem', index)"
         ></v-btn>
       </v-list-item-action>
     </template>
-    <v-list-item-title>{{ todoItem }}</v-list-item-title>
+    <v-list-item-title :style="textSyle">{{ todoItem.text }}</v-list-item-title>
   </v-list-item>
 </template>
 
 <script lang="ts" setup>
+import type { TodoItem } from '~/utils/interface';
+
+/*
+Props 
+*/
 interface Props {
-  todoItem: string;
+  todoItem: TodoItem;
   index: number;
 }
-const props = withDefaults(defineProps<Props>(), {
-  todoItem: '',
-  index: -1,
-});
+
+const { todoItem = { chk: false, text: '' }, index = -1 } =
+  defineProps<Props>();
+
+const emits = defineEmits<{
+  updateChk: [chk: boolean, idx: number];
+  deleteItem: [idx: number];
+}>();
+
+const textSyle = ref('');
+
+const updateCheck = (chk: boolean) => {
+  emits('updateChk', chk, index);
+  textSyle.value = chk ? 'text-decoration: line-through;' : '';
+};
 </script>
 
 <style lang="scss" scoped></style>

@@ -38,7 +38,6 @@ export const encAES256 = async (msg: any) => {
     secretKey,
     encodedText,
   );
-  console.log(ciphertext);
   return {
     ciphertext: Buffer.from(ciphertext).toString('base64'),
     iv: Buffer.from(cryptoStore.getIv).toString('base64'),

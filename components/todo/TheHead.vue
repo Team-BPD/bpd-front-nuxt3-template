@@ -28,7 +28,6 @@
           single-line
           v-model="subject"
           @keypress.enter="
-            /* 엔터키가 눌렷을때 동작하는 이벤트 메소드 */
             () => {
               // 부모 컴포넌트로 이벤트 전달
               $emit('change', subject);

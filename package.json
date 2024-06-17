@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.13.1",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@rushstack/eslint-patch": "^1.8.0",
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",

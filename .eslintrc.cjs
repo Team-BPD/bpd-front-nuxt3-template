@@ -26,7 +26,6 @@ module.exports = {
     "no-array-constructor": "error", // 배열선언시 리터럴 구문으로 선언
     "no-unused-vars": "warn", // 사용하지않은 변수는 경고표시
     "no-tabs": "off", // 들여쓰기시 탭문자 허용
-    // indent: ["error", "tab"], // 들여쓰기를 탭으로 설정. 아니면 오류
     semi: ["error", "always"], // 세미콜론을 항상 사용하지 않으면 오류로 처리
     "comma-dangle": ["error", "only-multiline"], // 배열 또는 객체 리터럴이 여러 줄로 작성될 때만 쉼표를 허용
     "no-undef": "off", // 정의되지 않은 변수 허용
@@ -56,7 +55,6 @@ module.exports = {
         "./layouts/**/*",
         "./pages/**/*",
         "./error.vue",
-        "./components/**/*",
       ],
       rules: { "vue/multi-word-component-names": "off" }, // nuxt 환경 디렉토리에서는 컴포넌트 이름이 다중단어 구성이 아니여도 되게 설정
     },

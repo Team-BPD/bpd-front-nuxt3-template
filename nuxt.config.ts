@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/test-utils/module',
     '@vueuse/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', config => {
         // @ts-expect-error
@@ -87,6 +88,9 @@ export default defineNuxtConfig({
       crossOriginEmbedderPolicy:
         process.env.ENV_MODE != 'PROD' ? 'unsafe-none' : 'unsafe-none',
       crossOriginResourcePolicy: 'cross-origin',
+      permissionsPolicy: {
+        // 'web-share': false,
+      },
     },
   },
   vite: {

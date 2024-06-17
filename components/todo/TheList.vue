@@ -11,14 +11,8 @@
           :key="index"
           :todo-item="item"
           :index="index"
-          @update-chk="
-            /* 체크박스 변경 이벤트 메소드 */
-            (chk, idx) => $emit('changeChk', chk, idx)
-          "
-          @delete-item="
-            /* 삭제버튼 클릭 이벤트 메소드 */
-            idx => $emit('deleteItem', idx)
-          "
+          @update-chk="(chk, idx) => $emit('changeChk', chk, idx)"
+          @delete-item="idx => $emit('deleteItem', idx)"
         />
       </v-list>
     </v-card-text>

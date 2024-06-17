@@ -12,6 +12,8 @@
   </v-parallax>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+onMounted(async () => {});
+</script>
 
 <style lang="scss" scoped></style>

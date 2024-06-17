@@ -6,8 +6,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 > **현재 표준 레벨 배포 버전 (since 2024.6.10)**
 
-<img src="https://img.shields.io/badge/Node.js-20.11.1-5FA04E?style=flat&logo=nodedotjs&logoColor=%235FA04E
-" />
+<img src="https://img.shields.io/badge/Node.js-20.11.1-5FA04E?style=flat&logo=nodedotjs&logoColor=%235FA04E" />
 <img src="https://img.shields.io/badge/npm-10.5.0-CB3837?style=flat&logo=npm&logoColor=#CB3837" />
 <img src="https://img.shields.io/badge/Nuxt.js-3.11.1-00DC82?style=flat&logo=nuxtdotjs&logoColor=#00DC82" />
 <img src="https://img.shields.io/badge/Vue3-3.4.21-4FC08D?style=flat&logo=vuedotjs&logoColor=#4FC08D" />

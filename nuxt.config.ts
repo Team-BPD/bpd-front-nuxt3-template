@@ -59,6 +59,14 @@ export default defineNuxtConfig({
         iso: 'ko-KR',
         temperature: 'celsius',
       },
+      {
+        code: 'es',
+        name: 'Español',
+        file: 'es.ts',
+        customCode: 'es',
+        iso: 'es',
+        temperature: 'celsius',
+      },
     ],
     lazy: true,
     langDir: 'lang',
@@ -78,6 +86,7 @@ export default defineNuxtConfig({
     headers: {
       contentSecurityPolicy: {
         'form-action': false,
+        // eslint-disable-next-line prettier/prettier
         'script-src': ['\'unsafe-inline\'', 'https:', 'http:', 'wasm-eval'],
         'script-src-attr': false,
         'connect-src': ['ws:', 'http:', 'https:'],

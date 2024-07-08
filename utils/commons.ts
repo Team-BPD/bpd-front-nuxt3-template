@@ -1,5 +1,11 @@
 import { Buffer } from 'buffer';
 
+/**
+ * 텍스트 암호화
+ * @param msg 암호화할 텍스트
+ * @return ciphertext: 암호화 메세지,<br> iv: 추가된 salt key(Random) Base64, <br>
+ * originiv: 추가된 salt key(Random) 원데이터,<br> key: 암호화 키(Random)
+ */
 export const encAES256 = async (msg: any) => {
   const cryptoStore = useCrtStore();
   const encoded = new TextEncoder();
@@ -69,4 +75,28 @@ export const decAES256 = async (cipherText: string) => {
     Buffer.from(cipherText, 'base64'),
   );
   return new TextDecoder().decode(decText);
+};
+
+export const formatPercent = (number: number, locale: string) => {
+  const options: Intl.NumberFormatOptions = {
+    style: 'percent',
+  };
+  return number.toLocaleString(locale, options);
+};
+
+export const formatTemperature = (num: number, locale: string) => {
+  let unit: string;
+  switch (locale) {
+    case 'en-US':
+      unit = 'fahrenheit';
+      break;
+    default:
+      unit = 'celsius';
+      break;
+  }
+  const options: Intl.NumberFormatOptions = {
+    style: 'unit',
+    unit,
+  };
+  return num.toLocaleString(locale, options);
 };

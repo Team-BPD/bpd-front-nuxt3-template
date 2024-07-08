@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
+
 export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
@@ -32,36 +33,37 @@ export default defineNuxtConfig({
   i18n: {
     // set nuxt i18n configuration options.
     // https://i18n.nuxtjs.org/docs/getting-started/usage
-    /*
-     * 베트남 고객사이트 적용 샘플 
+    // * 베트남 고객사이트 적용 샘플
     strategy: 'no_prefix',
     locales: [
-      {
-        code: 'vi',
-        name: 'Tiếng Việt',
-        file: 'vi-VN.ts',
-        fullLocale: 'vi-VN',
-        customCode: 'vn',
-      },
+      // {
+      //   code: 'vi',
+      //   name: 'Tiếng Việt',
+      //   file: 'vi-VN.ts',
+      //   fullLocale: 'vi-VN',
+      //   customCode: 'vn',
+      // },
       {
         code: 'en',
         name: 'English',
         file: 'en-US.ts',
-        fullLocale: 'en-US',
         customCode: 'en',
+        iso: 'en-US',
+        temperature: 'fahrenheit',
       },
       {
         code: 'ko',
         name: '한국어',
         file: 'ko-KR.ts',
-        fullLocale: 'ko-KR',
         customCode: 'ko',
+        iso: 'ko-KR',
+        temperature: 'celsius',
       },
     ],
     lazy: true,
     langDir: 'lang',
     defaultLocale: 'en',
-     */
+    // */
   },
   security: {
     removeLoggers: {
@@ -76,7 +78,7 @@ export default defineNuxtConfig({
     headers: {
       contentSecurityPolicy: {
         'form-action': false,
-        'script-src': ["'unsafe-inline'", 'https:', 'http:', 'wasm-eval'],
+        'script-src': ['\'unsafe-inline\'', 'https:', 'http:', 'wasm-eval'],
         'script-src-attr': false,
         'connect-src': ['ws:', 'http:', 'https:'],
         'worker-src': ['blob:'],

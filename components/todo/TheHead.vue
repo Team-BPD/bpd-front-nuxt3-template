@@ -59,7 +59,7 @@ interface Props {
 const { eraseText = false } = defineProps<Props>();
 
 // Emit 이벤트 메소드 선언
-const emits = defineEmits<{
+defineEmits<{
   change: [item: string]; // 입력값이 변경될때
 }>();
 

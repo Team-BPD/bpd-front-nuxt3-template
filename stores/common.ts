@@ -33,11 +33,6 @@ export const useDataStore = defineStore({
   state: () => ({
     items: '' as any,
   }),
-  getters: {
-    getItems: state => {
-      // return JSON.parse(decAES256(state.items));
-    },
-  },
   actions: {
     async setItems(v: TodoItem[]) {
       const { ciphertext } = await encAES256(JSON.stringify(v));

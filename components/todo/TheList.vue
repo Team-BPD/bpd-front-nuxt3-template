@@ -37,7 +37,7 @@ interface Props {
 const { todoItems = [] } = defineProps<Props>();
 
 // Emit 이벤트 메소드 선언
-const emits = defineEmits<{
+defineEmits<{
   changeChk: [chk: boolean, idx: number]; // 취소선 처리 이벤트
   deleteItem: [idx: number]; // 삭제처리 이벤트
 }>();

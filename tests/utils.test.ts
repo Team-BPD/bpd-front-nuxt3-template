@@ -2,12 +2,30 @@ import { it, expect, describe, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import TheListVue from '../components/todo/TheList.vue';
 import { formatPercent, formatTemperature } from '~/utils/commons';
-// import {  } from '~/composables/common';
 
 describe('TheList', () => {
   it('컴포넌트가 마운트 될때 ', async () => {
     const comp = await mountSuspended(TheListVue);
     expect(comp.html()).not.toContain('Test');
+  });
+});
+
+describe('언어 변환 테스트', () => {
+  it('en-US', () => {
+    const i18n = useNuxtApp().$i18n;
+    const { t, setLocale } = i18n;
+    setLocale('en-US');
+    t('hi');
+    expect(t('hi')).toBe('hello');
+    // t()
+  });
+  it('es', async () => {
+    const i18n = useNuxtApp().$i18n;
+    const { t, setLocale } = i18n;
+    await setLocale('es');
+    t('hi');
+    expect(t('hi')).toBe('¡Hola!');
+    // t()
   });
 });
 

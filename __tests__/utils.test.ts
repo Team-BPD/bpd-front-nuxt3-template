@@ -15,17 +15,13 @@ describe('언어 변환 테스트', () => {
     const i18n = useNuxtApp().$i18n;
     const { t, setLocale } = i18n;
     setLocale('en-US');
-    t('hi');
     expect(t('hi')).toBe('hello');
-    // t()
   });
   it('es', async () => {
     const i18n = useNuxtApp().$i18n;
     const { t, setLocale } = i18n;
     await setLocale('es');
-    t('hi');
     expect(t('hi')).toBe('¡Hola!');
-    // t()
   });
 });
 
